@@ -1,26 +1,23 @@
-version: '3'
+version: '3.9'
 services:
   app:
-    container_name: docker-node-mongo
     restart: always
     image: 127.0.0.1:5000/node_mongo
     build: .
     ports:
       - '80:3000'
-    links:
+    depends_on:
       - mongo
     deploy:
       replicas: 3
   mongo:
-    container_name: mongo
     image: mongo
     ports:
       - '27017:27017'
   visualizer:
-    container_name: visualizer
     image: dockersamples/visualizer
     deploy:
       placement:
         constraints: [node.role == manager]
     ports:
-      - 8080:8080
+      - 8084:8080

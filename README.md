@@ -1,9 +1,5 @@
 # Docker Node MongoDB Example
 
-> Simple example of a dockerized Node/Mongo app
-
-![Image](https://i.ibb.co/4Fgt31L/demo.gif)
-
 ## Quick Start
 
 # To perform swarm stack
@@ -24,7 +20,7 @@ sudo mkdir /usr/src/app
 
 sudo git clone https://github.com/soms1984/my_first_nodejs_mongodb.git /opt/node_mongo
 
-# to test it in the local docker without swarm
+# to test it in the local docker without swarm probably some error because because of replicas
 
 cd /opt/node_mongo
 
